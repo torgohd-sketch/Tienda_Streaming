@@ -1,5 +1,5 @@
 // Reemplaza por tu número
-const TELEFONO_WHATSAPP = "3016451598";
+const TELEFONO_WHATSAPP = "3116261483";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Lógica de Modales
@@ -109,7 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const paymentMethod = document.getElementById("paymentMethod").value;
     if (!userName) return;
 
-    const mensaje = `¡Hola!  Quisiera solicitar:\n\n *Servicio:* ${selectedProduct.name}\n *Plan/Tiempo:* ${selectedProduct.type}\n💰 *Precio:* ${selectedProduct.price}\n👤 *Cliente:* ${userName}\n💳 *Pago:* ${paymentMethod}\n\nQuedo atento(a) para proceder con el pago.`;
+    const mensaje = `¡Hola! 👋 Quisiera solicitar una cuenta:
+
+📌 *Producto:* ${selectedProduct.name}
+🏷️ *Detalles:* ${selectedProduct.type}
+💰 *Precio:* ${selectedProduct.price}
+👤 *Cliente:* ${userName}
+💳 *Medio de Pago:* ${paymentMethod}
+
+Quedo a la espera de los datos de pago para completar la compra.`;
     window.open(`https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`, "_blank");
     closeModal();
     orderForm.reset();
