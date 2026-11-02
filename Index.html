@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamStore - Cuentas de Streaming Prémium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/Style.css">
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">⚡</span> Store<span>Mobile</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#beneficios">Garantía</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+      <a href="#catalogo" class="btn btn-primary nav-cta">Ver Cuentas</a>
+    </div>
+  </nav>
+
+
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">🔥 Entrega Inmediata & 100% Garantizado</span>
+        <h1>Tus plataformas favoritas al <span>mejor precio</span></h1>
+        <p>Accede a Netflix, Disney+, Max, Spotify y más con cuentas prémium, perfiles privados y soporte activo los 7 días de la semana.</p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary btn-lg">Explorar Ofertas</a>
+          <a href="#faq" class="btn btn-secondary btn-lg">¿Cómo funciona?</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+<section id="catalogo" class="catalog-section">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Catálogo de Cuentas</h2>
+      <p>🪪 Todas las cuentas con garantías incluidas ✨</p>
+    </div>
+
+    <!-- Buscador -->
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar plataformas, combos o planes...">
+    </div>
+
+    <!-- Contenedor del Grid (Controlado por JS para la paginación) -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Netflix -->
+      <article class="card product-item" data-search="netflix 30 dias peliculas series">
+        <div class="card-header netflix-bg">
+          <img src="assets/img/netflix.png" alt="Netflix" class="service-icon" onerror="this.style.display='none'">
+          <h3>Netflix</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box">
+            <span class="currency">$</span><span class="amount">13.000</span>
+          </div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Netflix" data-price="$13.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Disney+ -->
+      <article class="card product-item" data-search="disney plus premium 30 dias">
+        <div class="card-badge offer">Varias opciones</div>
+        <div class="card-header disney-bg">
+          <img src="assets/img/disney.png" alt="Disney" class="service-icon" onerror="this.style.display='none'">
+          <h3>Disney+</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box">
+            <span class="currency">$</span><span class="amount">9.000</span>
+          </div>
+          <select class="variant-select">
+            <option value="9.000" data-type="Plus (30 días)">Plus - 30 días</option>
+            <option value="11.000" data-type="Premium (30 días)">Premium - 30 días</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="Disney+">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Amazon Prime -->
+      <article class="card product-item" data-search="amazon prime video 30 dias">
+        <div class="card-header prime-bg">
+          <img src="assets/img/prime.png" alt="Amazon" class="service-icon" onerror="this.style.display='none'">
+          <h3>Amazon Prime</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">8.000</span></div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Amazon Prime" data-price="$8.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo paquete stardar netflix disney premium">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>💫 Paquete stardar</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">19.000</span></div>
+          <p class="features-text">Netflix + Disney Premium</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete stardar" data-price="$19.000" data-type="Netflix + Disney Premium">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo paquete stardar 2 netflix amazon">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>🏵️ Paquete stardar 2</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">17.000</span></div>
+          <p class="features-text">Netflix + Amazon</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete stardar 2" data-price="$17.000" data-type="Netflix + Amazon">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- ChatGPT -->
+      <article class="card product-item" data-search="chat gpt ai inteligencia artificial correo personal">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(16,163,127,0.15) 0%, transparent 100%);">
+          <img src="assets/img/chatgpt.png" alt="ChatGPT" class="service-icon" onerror="this.style.display='none'">
+          <h3>ChatGPT Plus</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">18.000</span></div>
+          <p class="features-text">⭐ 30 días</p>
+          <button class="btn btn-card buy-btn" data-name="ChatGPT" data-price="$18.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- HBO Max -->
+      <article class="card product-item" data-search="hbo max 30 dias">
+        <div class="card-header max-bg">
+          <img src="assets/img/max.png" alt="HBO Max" class="service-icon" onerror="this.style.display='none'">
+          <h3>HBO Max</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">8.000</span></div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="HBO Max" data-price="$8.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Paramount -->
+      <article class="card product-item" data-search="paramount plus 30 dias">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(0,100,255,0.15) 0%, transparent 100%);">
+          <img src="assets/img/paramount.png" alt="Paramount" class="service-icon" onerror="this.style.display='none'">
+          <h3>Paramount+</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">9.000</span></div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Paramount+" data-price="$9.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Crunchyroll -->
+      <article class="card product-item" data-search="crunchyroll anime 30 dias">
+        <div class="card-header crunchy-bg">
+          <img src="assets/img/crunchyroll.png" alt="Crunchyroll" class="service-icon" onerror="this.style.display='none'">
+          <h3>Crunchyroll</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">7.000</span></div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Crunchyroll" data-price="$7.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+       <article class="card product-item" data-search="Vix 30 dias">
+        <div class="card-header crunchy-bg">
+          <img src="assets/img/Vix.png" alt="Vix" class="service-icon" onerror="this.style.display='none'">
+          <h3>Vix</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">9.000</span></div>
+          <p class="features-text">⭐ 30 días de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Vix" data-price="$9.000" data-type="30 días">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Canva -->
+      <article class="card product-item" data-search="canva pro diseño correo personal 1 año">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(0,196,204,0.15) 0%, transparent 100%);">
+          <img src="assets/img/canva.png" alt="Canva" class="service-icon" onerror="this.style.display='none'">
+          <h3>Canva Pro</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">9.000</span></div>
+          <select class="variant-select">
+            <option value="9.000" data-type="30 días (Correo Personal)">30 días</option>
+            <option value="30.000" data-type="1 año (Correo Personal)">1 Año</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="Canva Pro (Correo Personal)">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Capcut Pro -->
+      <article class="card product-item" data-search="capcut pro editor video 90 dias">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 100%);">
+          <img src="assets/img/capcut.png" alt="Capcut" class="service-icon" onerror="this.style.display='none'">
+          <h3>CapCut Pro</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">25.000</span></div>
+          <select class="variant-select">
+            <option value="25.000" data-type="30 días">30 días</option>
+            <option value="50.000" data-type="90 días">90 días</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="CapCut Pro">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- IPTV -->
+      <article class="card product-item" data-search="iptv television win sports canales 3 meses 1 año">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(239,68,68,0.15) 0%, transparent 100%);">
+          <img src="assets/img/iptv.png" alt="IPTV" class="service-icon" onerror="this.style.display='none'">
+          <h3>IPTV con WIN</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">10.000</span></div>
+          <select class="variant-select">
+            <option value="10.000" data-type="30 días">30 días</option>
+            <option value="25.000" data-type="3 meses">3 meses</option>
+            <option value="80.000" data-type="1 Año">1 Año</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="IPTV con WIN">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Apple TV -->
+      <article class="card product-item" data-search="apple tv 3 meses">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);">
+          <img src="assets/img/appletv.png" alt="Apple TV" class="service-icon" onerror="this.style.display='none'">
+          <h3>Apple TV</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">20.000</span></div>
+          <p class="features-text">⭐ 3 meses de servicio</p>
+          <button class="btn btn-card buy-btn" data-name="Apple TV" data-price="$20.000" data-type="3 meses">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- YouTube Premium -->
+      <article class="card product-item" data-search="youtube premium videos musica correo personal">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(255,0,0,0.15) 0%, transparent 100%);">
+          <img src="assets/img/youtube.png" alt="YouTube" class="service-icon" onerror="this.style.display='none'">
+          <h3>YouTube Premium</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">13.000</span></div>
+          <select class="variant-select">
+            <option value="13.000" data-type="30 días (Correo personal)">30 días</option>
+            <option value="30.000" data-type="3 meses (Correo personal)">3 meses</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="YouTube Premium">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- Spotify Premium -->
+      <article class="card product-item" data-search="spotify premium musica correo personal 3 meses">
+        <div class="card-header spotify-bg">
+          <img src="assets/img/spotify.png" alt="Spotify" class="service-icon" onerror="this.style.display='none'">
+          <h3>Spotify Premium</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">10.000</span></div>
+          <select class="variant-select">
+            <option value="10.000" data-type="30 días (Correo personal)">30 días</option>
+            <option value="25.000" data-type="3 meses (Correo personal)">3 meses</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="Spotify Premium">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- DirecTV Go -->
+      <article class="card product-item" data-search="directv go dgo win futbol deportes cuenta entera">
+        <div class="card-header" style="background: linear-gradient(180deg, rgba(0,174,239,0.15) 0%, transparent 100%);">
+          <img src="assets/img/directv.png" alt="DirecTV" class="service-icon" onerror="this.style.display='none'">
+          <h3>DirecTV GO</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">25.000</span></div>
+          <select class="variant-select">
+            <option value="25.000" data-type="Plan Básico (30 días)">Plan Básico</option>
+            <option value="30.000" data-type="Con WIN (30 días)">Con WIN</option>
+          </select>
+          <button class="btn btn-card buy-btn" data-name="DirecTV GO (Cuenta entera)">Solicitar</button>
+        </div>
+      </article>
+
+      <!-- COMBOS -->
+      
+
+      <article class="card product-item" data-search="combo paquete magico netflix hbo max">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>🎃 Paquete magico</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">17.000</span></div>
+          <p class="features-text">Netflix + HBO Max</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete magico" data-price="$17.000" data-type="Netflix + HBO Max">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo paquete FAST crunchyroll vix paramount">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>🪩 Paquete FAST</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">19.000</span></div>
+          <p class="features-text">Crunchyroll + Vix + Paramount</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete FAST" data-price="$19.000" data-type="Crunchyroll + Vix + Paramount">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo paquete OMEGA netflix disney premium amazon">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>🌟 Paquete OMEGA</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">23.000</span></div>
+          <p class="features-text">Netflix + Disney Premium + Amazon</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete OMEGA" data-price="$23.000" data-type="Net+Dis+Amz">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo paquete especial netflix disney premium youtube spotify">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>💥 Paquete Especial</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">26.000</span></div>
+          <p class="features-text">Netflix + Disney Prem. + YouTube o Spotify</p>
+          <button class="btn btn-card buy-btn" data-name="Paquete Especial" data-price="$26.000" data-type="Net+Dis+YT/Spoti">Solicitar</button>
+        </div>
+      </article>
+
+      <article class="card product-item" data-search="combo PAQUETE GALACTICO netflix disney premium amazon hbo max">
+        <div class="card-badge" style="background:#f59e0b">Combo</div>
+        <div class="card-header">
+          <h3>🎊 PAQUETE GALACTICO</h3>
+        </div>
+        <div class="card-body">
+          <div class="price-box"><span class="currency">$</span><span class="amount">30.000</span></div>
+          <p class="features-text">Netflix + Disney Prem. + Amazon + HBO Max</p>
+          <button class="btn btn-card buy-btn" data-name="PAQUETE GALACTICO" data-price="$30.000" data-type="Net+Dis+Amz+HBO">Solicitar</button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Controles de Paginación -->
+    <div class="pagination-controls" id="paginationControls"></div>
+    
+    <div style="text-align: center; margin-top: 2rem; color: var(--text-muted);">
+      <p>✨ Manejamos muchas más aplicaciones, si tienes dudas sobre alguna no dudes en preguntar 😊</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Beneficios y Garantía -->
+  <section id="beneficios" class="features-section">
+    <div class="section-container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">⚡</div>
+          <h3>Entrega Inmediata</h3>
+          <p>Una vez verificado tu pago, recibes tus credenciales de acceso en pocos minutos por WhatsApp.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">🛡️</div>
+          <h3>Garantía Total</h3>
+          <p>Todas nuestras cuentas cuentan con cobertura completa durante todo el tiempo contratado.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">💬</div>
+          <h3>Soporte 24/7</h3>
+          <p>¿Dudas o inconvenientes con tu cuenta? Te brindamos atención rápida a través de soporte directo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes (FAQ) -->
+  <section id="faq" class="faq-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos tus dudas antes de realizar tu compra.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <details class="faq-item">
+          <summary>¿Cómo realizo el pago de mi cuenta?</summary>
+          <div class="faq-answer">
+            <p>Aceptamos transferencias bancarias locales, Nequi, llaves. Al presionar en "Solicitar Cuenta", te atenderemos por WhatsApp para darte los datos de pago según tu país.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué pasa si mi cuenta deja de funcionar?</summary>
+          <div class="faq-answer">
+            <p>Todas las cuentas disponen de garantía activa por los 30 días del servicio. Si surge algún inconveniente, se soluciona o se reemplaza la cuenta en menos de 24 horas.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Puedo cambiar la clave de las cuentas?</summary>
+          <div class="faq-answer">
+            <p>En perfiles compartidos no está permitido cambiar la contraseña ni alterar la configuración para no afectar a otros usuarios. En cuentas completas sí tendrás acceso total según los términos pactados.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">⚡ Store<span>Mobile</span></a>
+          <p>Tu proveedor confiable de suscripciones prémium para entretenimiento en streaming.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#catalogo">Servicios</a></li>
+            <li><a href="#beneficios">Garantía</a></li>
+            <li><a href="#faq">Preguntas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StoreMobile. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <div id="orderModal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">&times;</button>
+      <div class="modal-header">
+        <span class="modal-icon">🛒</span>
+        <h3 id="modalProductName">Confirmar Solicitud</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info-row">
+          <span>Plan:</span>
+          <strong id="modalProductType">-</strong>
+        </div>
+        <div class="modal-info-row">
+          <span>Precio:</span>
+          <strong id="modalProductPrice" class="highlight-price">-</strong>
+        </div>
+        
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="userName">Tu Nombre:</label>
+            <input type="text" id="userName" required>
+          </div>
+          <div class="form-group">
+            <label for="paymentMethod">Método de Pago Preferido:</label>
+            <select id="paymentMethod" required>
+              <option value="Nequi / Daviplata">Nequi / Daviplata</option>
+              <option value="Transferencia Bancaria">Llave</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-whatsapp-submit">
+            💬 Continuar a WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="Js/Main.js"></script>
+</body>
+</html>
